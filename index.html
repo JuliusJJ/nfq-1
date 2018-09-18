@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+ <head>
+  <meta charset="UTF-8">
+  <title>PHP Test</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+      $(document).ready(function (){
+        $("#btn").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#scroll").offset().top
+            }, 2000);
+        });
+    });
+  </script>
+
+ <body>
+     <section class="intro">
+         <div class="inner">
+             <div class="content">
+                 <h1>Atsigaivink!</h1>
+                 <p>Naujasis Vandenuko butelis buvo kurtas galvojant apie sportuojančius vandens mėgėjus. Jį patogu paimti, suspausti, kad lengviau bėgtų vanduo iš tam pritaikyto kamštelio. Prisiminkite pasiimti į sporto salę, važiuodami dviračiu, bėgiodami, aktyviai leisdami laiką gamtoje.
+                </p>
+                <button id="btn" class="btn" type="button">Pradėkime</button>
+             </div>
+         </div>
+     </section>
+
+         <div class="pic" id="scroll">
+         </div>
+
+        <form action="newitem.php" method="POST" class="scrr">
+            <input type="text" name="name" placeholder="Name: " pattern="[A-Za-z-ąčęėįšųūžĄČĘĖĮŠŲŪŽ]+" title="Tik raidės A-Ž" required><br>
+            <input type="text" name="last" placeholder="Last name: " pattern="[A-Za-z-ąčęėįšųūžĄČĘĖĮŠŲŪŽ]+" title="Tik raidės A-Ž" required><br>
+            <input type="number" name="phone" placeholder="Phone: " required><br>
+            <input type="email" name="email" placeholder="E-mail: " required><br>
+            <input type="text" name="address" placeholder="Address: " pattern="[A-Za-z0-9-, .ąčęėįšųūž]+" title="Tik raidės A-Ž" required><br>
+            Tipas: <select name="type">
+                    <option value="260ml 1Eur">260ml 1Eur</option>
+                    <option value="350ml 1.5Eur">350ml 1,5Eur</option>
+                    <option value="500ml 1.8Eur">500ml 1,8Eur</option>
+                    <option value="750ml 2.5Eur">750ml 2,5Eur</option>
+                    <option value="1000ml 3Eur">1000ml 3Eur</option>
+                  </select>
+            Kiekis: <select name="amount">
+                    <option value="8">8</option>
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                    <option value="128">128</option>
+                  </select>
+        
+            
+            <input type="submit" value="Užsakyti" class="btn">
+            
+    </form>
+    <div style="height: 75px;">
+        <a class ="bt" href= "duomenys.php">Duomenų sąrašas</a>
+    </div>
+    
+    
+     
+ </body>
+</html>
